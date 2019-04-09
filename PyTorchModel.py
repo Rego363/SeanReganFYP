@@ -136,13 +136,7 @@ for line in lines:
 	nPI = np.array(nums)
 	t1 = torch.Tensor(nPI)	# Make training data a tensor (size 36, )
 	t1.resize_(18, 36, 4, 4)	# Resize to match Conv layer
-	exTen = torch.Tensor(np.array(expected))	# Get expected output as tensor
-
-
-	#out = my_script_module.forward(t1)	# Pass through network
-
-	#while optimize():
-		#out = my_script_module.forward(t1)	# Pass through network
+	exTen = torch.Tensor(np.array(expected))	# Get expected output 
 	train(t1, exTen)
 	epi = epi + 1
 	
