@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/modelLoader.dir/modelLoader.cpp.o  -o modelLoader -Wl,-rpath,/home/sean/SeanReganFYP/ModelLoading/libtorch/lib libtorch/lib/libtorch.so -Wl,--no-as-needed,/home/sean/SeanReganFYP/ModelLoading/libtorch/lib/libcaffe2.so -Wl,--as-needed libtorch/lib/libc10.so -lpthread 

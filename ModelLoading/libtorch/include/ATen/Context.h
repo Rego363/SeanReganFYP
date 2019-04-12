@@ -1,19 +1,19 @@
 #pragma once
 
-#include <ATen/CPUGeneral.h>
-#include <ATen/Type.h>
-#include <ATen/TypeExtendedInterface.h>
-#include <ATen/Utils.h>
-#include <ATen/LegacyTHDispatch.h>
-#include <ATen/LegacyTHDispatcher.h>
-#include <ATen/core/ATenGeneral.h>
-#include <ATen/core/Generator.h>
-#include <ATen/core/LegacyTypeDispatch.h>
-#include <ATen/core/VariableHooksInterface.h>
-#include <ATen/detail/CUDAHooksInterface.h>
-#include <ATen/detail/HIPHooksInterface.h>
-#include <ATen/detail/ComplexHooksInterface.h>
-#include <c10/util/Exception.h>
+#include "/home/sean/SeanReganFYP/ModelLoading/libtorch/include/ATen/CPUGeneral.h"
+#include "/home/sean/SeanReganFYP/ModelLoading/libtorch/include/ATen/Type.h"
+#include "/home/sean/SeanReganFYP/ModelLoading/libtorch/include/ATen/TypeExtendedInterface.h"
+#include "/home/sean/SeanReganFYP/ModelLoading/libtorch/include/ATen/Utils.h"
+#include "/home/sean/SeanReganFYP/ModelLoading/libtorch/include/ATen/LegacyTHDispatch.h"
+#include "/home/sean/SeanReganFYP/ModelLoading/libtorch/include/ATen/LegacyTHDispatcher.h"
+#include "/home/sean/SeanReganFYP/ModelLoading/libtorch/include/ATen/core/ATenGeneral.h"
+#include "/home/sean/SeanReganFYP/ModelLoading/libtorch/include/ATen/core/Generator.h"
+#include "/home/sean/SeanReganFYP/ModelLoading/libtorch/include/ATen/core/LegacyTypeDispatch.h"
+#include "/home/sean/SeanReganFYP/ModelLoading/libtorch/include/ATen/core/VariableHooksInterface.h"
+#include "/home/sean/SeanReganFYP/ModelLoading/libtorch/include/ATen/detail/CUDAHooksInterface.h"
+#include "/home/sean/SeanReganFYP/ModelLoading/libtorch/include/ATen/detail/HIPHooksInterface.h"
+#include "/home/sean/SeanReganFYP/ModelLoading/libtorch/include/ATen/detail/ComplexHooksInterface.h"
+#include "/home/sean/SeanReganFYP/ModelLoading/libtorch/include/c10/util/Exception.h"
 
 #include <memory>
 #include <mutex>

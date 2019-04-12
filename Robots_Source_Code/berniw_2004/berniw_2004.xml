@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    file                 : berniw.xml
+    created              : Mon Apr 17 13:51:00 CET 2000
+    copyright            : (C) 2000 by Bernhard Wymann
+    email                : berniw@bluewin.ch
+    version              : $Id: berniw.xml,v 1.9 2002/12/01 00:47:01 berniw Exp $
+-->
+
+<!--    This program is free software; you can redistribute it and/or modify  -->
+<!--    it under the terms of the GNU General Public License as published by  -->
+<!--    the Free Software Foundation; either version 2 of the License, or     -->
+<!--    (at your option) any later version.                                   -->
+
+<!DOCTYPE params SYSTEM "../../libs/tgf/params.dtd">
+
+<params name="berniw_2004" type="robotdef">
+  <section name="Robots">
+    <section name="index">
+
+	  <section name="1">
+		<attstr name="name" val="berniw 2004 1"/>
+		<attstr name="team" val="berniw"/>
+		<attstr name="desc" val="Berni's first Bot 1"/>
+		<attstr name="author" val="Bernhard Wymann"/>
+		<attstr name="car name" val="car5-trb1"/>
+		<attnum name="race number" val="37"/>
+		<attnum name="red" val="0.0"/>
+		<attnum name="green" val="1.0"/>
+		<attnum name="blue" val="1.0"/>
+      </section>
+
+	  <section name="2">
+		<attstr name="name" val="berniw 2004 2"/>
+		<attstr name="team" val="berniw"/>
+		<attstr name="desc" val="Berni's first Bot 2"/>
+		<attstr name="author" val="Bernhard Wymann"/>
+		<attstr name="car name" val="car5-trb1"/>
+		<attnum name="race number" val="38"/>
+		<attnum name="red" val="0.0"/>
+		<attnum name="green" val="1.0"/>
+		<attnum name="blue" val="1.0"/>
+      </section>
+
+	</section>
+  </section>
+</params>
+
+
+
+
+
+
+

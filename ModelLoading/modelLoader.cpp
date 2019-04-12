@@ -1,25 +1,15 @@
 #include <torch/script.h> 
 #include <iostream>
 #include <memory>
+#include <stdlib.h>
 
 int main(int argc, const char* argv[])
-{
-	if(argc != 2)
-	{
-		std::cerr << "Usage: modelLoader <path-to-exported-script-module>\n";
-		return -1;
-	}
+{	
+	torch::IntArrayRef s = torch::IntArrayRef{18,36, 4, 4};	// New shape of tensor
+	std::vector<torch::jit::IValue> inputs; // Create a vector of inputs.	
+	float sensors[36];			// Array of floats for inputs. 
 	
-	// Deserialize the ScriptModule from a file using torch::jit::load().
-	std::shared_ptr<torch::jit::script::Module> module = torch::jit::load(argv[1]);
-
-	assert(module != nullptr);
-	std::cout << "ok\n";
-
-	// Create a vector of inputs.
-	std::vector<torch::jit::IValue> inputs;
-	float sensors[36];
-
+	// Test inputs from the first frame of the race
 	sensors[0] = 0.0f;
 	sensors[1] = 6.0f;
 	sensors[2] = -10.0f;
@@ -56,8 +46,14 @@ int main(int argc, const char* argv[])
 	sensors[33] = 11.0f;
 	sensors[34] = 3.93443f;
 	sensors[35] = 0.0f;
+	
+	// Load the model from a file
+	std::shared_ptr<torch::jit::script::Module> module = torch::jit::load("model.pt");
+	
+	assert(module != nullptr);	// If the model isn't loaded alert user
+	std::cout << "ok\n";	// Let user know model was loaded
 
-
+	// Put inputs into tensor
 	auto t = torch::tensor({sensors[0], sensors[1], sensors[2],sensors[3],
 				sensors[4], sensors[5], sensors[6],sensors[7],
 				sensors[8], sensors[9], sensors[10],sensors[11],
@@ -67,21 +63,12 @@ int main(int argc, const char* argv[])
 				sensors[24], sensors[25], sensors[26],sensors[27],
 				sensors[28], sensors[29], sensors[30],sensors[31],
 				sensors[32], sensors[33], sensors[34],sensors[35]});
-	torch::IntArrayRef s = torch::IntArrayRef{18,36, 4, 4};
-	t.resize_(s);
-	std::cout << t.size(0) << std::endl;
-	std::cout << t.size(1) << std::endl;
-	std::cout << t.size(2) << std::endl;
-	std::cout << t.size(3) << std::endl;
-	// Put into numpy array
-	//nPI = np.array(sensors);
-	// Put into torch.Tensor
-	//t = torch::Tensor(sen);
-	// Resize to (18, 36, 4, 4)
-	//t.resize(18, 36, 4, 4);
-	inputs.push_back(t); 
 
-	// Execute the model and turn its outputs into a tensor
-	auto output = module->forward(inputs).toTensor();
-	std::cout << output << std::endl;
+	t.resize_(s);	// Resize tensor (36) to fit model (18, 36, 4,4)
+	
+	inputs.push_back(t); // Put tensor into inputs 
+
+	auto output = module->forward(inputs).toTensor();	// Pass inputs through model 
+	std::cout << output << std::endl;			// Display output to user
+	
 }

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    file                 : corvette.xml
+    created              : Sun Mar 25 01:36:37 CET 2001
+    copyright            : (C) 2001 by Eric Espi�    email                : Eric.Espie@torcs.org   
+    version              : $Id: wheel-1.xml,v 1.6 2003/08/26 11:41:01 berniw Exp $                                  
+-->
+
+<!--    This program is free software; you can redistribute it and/or modify  -->
+<!--    it under the terms of the GNU General Public License as published by  -->
+<!--    the Free Software Foundation; either version 2 of the License, or     -->
+<!--    (at your option) any later version.                                   -->
+
+<!DOCTYPE params SYSTEM "../../../../src/libs/tgf/params.dtd">
+
+<params name="" type="template" mode="mw">
+  <section name="Car">
+    <attnum name="initial fuel" unit="l" min="1.0" max="87.0" val="87.0"/>
+  </section>
+
+  <section name="berniw private">
+    <attnum name="caero" val="1.4"/>
+    <attnum name="cfriction" val="1.2"/>
+	<attnum name="fuelperlap" val="1.22"/>
+	<attnum name="steerpgain" val="0.07"/>
+	<attnum name="steerpgainmax" val="0.7"/>
+	<attstr name="teammate" val="berniw 2004 1"/>
+  </section>
+
+</params>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

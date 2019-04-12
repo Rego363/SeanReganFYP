@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+	file                 : car5-trb1.xml
+	created              : Tue Oct 9 16:51:21 
+	copyright            : (C) 2007 Eric Espié, Berhard Wymann
+	email                : berniw@bluewin.ch
+	version              : $Id: default.xml,v 1.1.2.1 2008/05/20 18:51:05 berniw Exp $
+-->
+
+<!--    This program is free software; you can redistribute it and/or modify  -->
+<!--    it under the terms of the GNU General Public License as published by  -->
+<!--    the Free Software Foundation; either version 2 of the License, or     -->
+<!--    (at your option) any later version.                                   -->
+
+<!DOCTYPE params SYSTEM "../../../../src/libs/tgf/params.dtd">
+
+<params name="car5-trb1" type="template">
+	<section name="Car">
+		<attnum name="initial fuel" min="1.0" max="87.0" unit="l" val="77.0"/>
+	</section>
+
+	<section name="berniw private">
+		<attnum name="caero" val="1.0"/>
+		<attnum name="cfriction" val="1.15"/>
+		<attnum name="fuelperlap" val="2.6"/>
+		<attnum name="steerpgain" val="0.12"/>
+		<attnum name="steerpgainmax" val="0.4"/>
+		<attstr name="teammate" val="berniw 2004 2"/>
+	</section>
+	
+</params>

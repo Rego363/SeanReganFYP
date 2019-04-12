@@ -1,8 +1,8 @@
 #pragma once
 
-#include <c10/core/DeviceType.h>
-#include <c10/macros/Macros.h>
-#include <c10/util/Exception.h>
+#include "/home/sean/SeanReganFYP/ModelLoading/libtorch/include/c10/core/DeviceType.h"
+#include "/home/sean/SeanReganFYP/ModelLoading/libtorch/include/c10/macros/Macros.h"
+#include "/home/sean/SeanReganFYP/ModelLoading/libtorch/include/c10/util/Exception.h"
 
 #include <cstddef>
 #include <functional>

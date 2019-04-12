@@ -5,7 +5,7 @@
 // ATen/core (which would require a lot more build system hacking.)
 // If you modify me, keep me synchronized with that file.
 
-#include <c10/macros/Macros.h>
+#include "/home/sean/SeanReganFYP/ModelLoading/libtorch/include/c10/macros/Macros.h"
 
 #include <ostream>
 #include <functional>

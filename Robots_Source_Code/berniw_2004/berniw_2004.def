@@ -1,0 +1,10 @@
+;
+; berniw_2004.def
+;
+
+LIBRARY
+
+SECTIONS .data READ WRITE
+
+EXPORTS
+	berniw_2004
